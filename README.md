@@ -49,15 +49,18 @@ ngrok config add-authtoken <YOUR_TOKEN>   # treat this token like a password
 ### 4. Run the app locally
 ```bash
 npm install
-npm start            # app starts on a local port (e.g. 5000)
+npm start            # app starts on a local port (e.g. 3000)
 ```
+After you run the last command, the app should get started pointed toward local host with the port number while fetching the data. 
+
+![alt text](local-run.png)
 
 ### 5. Open the tunnel
 ```bash
 ngrok http 3000
 ```
 Ngrok prints a public **HTTPS** URL that forwards to your local app, plus a live session status screen.
-
+![alt text](ngrok-run.png)
 ---
 
 ## ⚙️ How It Works
@@ -76,6 +79,14 @@ The tunnel is established **outbound from your machine**, so NAT and firewalls �
 **Bonus:** Ngrok's local inspector at `http://127.0.0.1:4040` shows every request (method, path, status, headers) in real time — ideal for debugging webhooks.
 
 ---
+
+## Live APP 
+
+![alt text](Live-Page.png)
+
+![alt text](Groups-Page.png)
+
+![alt text](Schedule-Page.png)
 
 ## 📚 What I Learnt
 
