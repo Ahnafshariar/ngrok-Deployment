@@ -26,25 +26,35 @@ Expose a locally running Node.js application to the public internet through Ngro
 
 ### 1. Get the application
 ```bash
-gh repo clone <user>/Module-3-deployment
-cd Module-3-deployment
+gh repo clone Ahnafshariar/wc2026-tracker
+cd wc2026-tracker
 ```
 
-### 2. Install Ngrok and authenticate
+## 2 — Create an Ngrok account and get your auth token
+
+- Sign up at https://dashboard.ngrok.com/signup (email, or Google/GitHub sign-in).
+- Verify your email and log in.
+- Open Your Authtoken: https://dashboard.ngrok.com/get-started/your-authtoken
+- Click Copy to grab the token — treat it like a password.
+
+
+---
+
+### 3. Install Ngrok and authenticate
 ```bash
 snap install ngrok
 ngrok config add-authtoken <YOUR_TOKEN>   # treat this token like a password
 ```
 
-### 3. Run the app locally
+### 4. Run the app locally
 ```bash
 npm install
 npm start            # app starts on a local port (e.g. 5000)
 ```
 
-### 4. Open the tunnel
+### 5. Open the tunnel
 ```bash
-ngrok http 5000
+ngrok http 3000
 ```
 Ngrok prints a public **HTTPS** URL that forwards to your local app, plus a live session status screen.
 
@@ -55,7 +65,7 @@ Ngrok prints a public **HTTPS** URL that forwards to your local app, plus a live
 ```mermaid
 flowchart LR
     U["🌍 Internet User"] -->|HTTPS| N["Ngrok Edge<br/>(public endpoint)"]
-    N -->|secure outbound tunnel| L["💻 Your machine<br/>localhost:5000"]
+    N -->|secure outbound tunnel| L["💻 Your machine<br/>localhost:3000"]
     L --> N --> U
     style U fill:#1e3a8a,stroke:#60a5fa,color:#fff
     style L fill:#065f46,stroke:#10b981,color:#fff
@@ -79,7 +89,7 @@ The tunnel is established **outbound from your machine**, so NAT and firewalls �
 
 - HTTPS by default — traffic between user and Ngrok edge is encrypted.
 - No inbound firewall holes or router changes required.
-- Optional basic auth and IP restrictions: `ngrok http 5000 --basic-auth "user:pass"`.
+- Optional basic auth and IP restrictions: `ngrok http 3000 --basic-auth "user:pass"`.
 
 ## ⚠️ Security Weaknesses & Cautions
 
