@@ -30,7 +30,7 @@ gh repo clone Ahnafshariar/wc2026-tracker
 cd wc2026-tracker
 ```
 
-### 2.Create an Ngrok account and get your auth token
+### 2. Create an Ngrok account and get your auth token
 
 - Sign up at https://dashboard.ngrok.com/signup (email, or Google/GitHub sign-in).
 - Verify your email and log in.
