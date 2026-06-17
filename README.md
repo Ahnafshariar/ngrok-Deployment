@@ -60,6 +60,7 @@ After you run the last command, the app should get started pointed toward local 
 ngrok http 3000
 ```
 Ngrok prints a public **HTTPS** URL that forwards to your local app, plus a live session status screen.
+
 ![alt text](ngrok-run.png)
 ---
 
